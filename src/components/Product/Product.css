@@ -43,3 +43,14 @@
 .btn-cart:hover{
     background-color: orange;
 }
+
+.btn-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn-text{
+    margin-right: 5px;
+}
