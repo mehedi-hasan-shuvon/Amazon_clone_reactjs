@@ -7,14 +7,19 @@ import './Orders.css'
 const Orders = () => {
     const [products, setProducts] = useProducts();
     const [cart, setCart] = useCart(products);
-    // console.log(cart);
+
+    const handelRemoveProduct = (product) => {
+        const rest = cart.filter(item => item.id !== product.id);
+        setCart(rest);
+    }
     return (
         <div className='shop-container'>
             <div className="review-items-container">
                 {
                     cart.map(product => <ReviewItem
-                    key={product.id}
-                    product={product}></ReviewItem>)
+                        key={product.id}
+                        product={product}
+                        handelRemoveProduct={handelRemoveProduct}></ReviewItem>)
                 }
             </div>
 

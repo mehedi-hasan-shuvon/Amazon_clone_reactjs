@@ -22,3 +22,22 @@
     display: flex;
     justify-content: space-between;
 }
+
+.delete-icon {
+    color: #EB5757;
+    font-size: 27px;
+}
+
+.delete-button {
+    background-color: rgba(235, 87, 87, 0.3);
+    border: 0px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.delete-container {
+    display: flex;
+    align-items: center;
+}
