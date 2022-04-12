@@ -7,6 +7,8 @@
  * 6.attach form field handeler and form sublit handeler
  * 7.npm install --save react-firebase-hooks
  * 8.useCreateUserWithEmailAndPassword(auth) from react-firebase-hooks
+ * 9.if user is created redirect to the expected page
+ * 10. useSignInWithEmailAndPassword form react-firebase-hooks
  */
 
 /**

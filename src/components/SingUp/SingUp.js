@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SingUp.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const SingUp = () => {
@@ -15,6 +15,9 @@ const SingUp = () => {
 
 
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
+
+
+
 
     const handelEmailBlur = event => {
         setEmail(event.target.value);
