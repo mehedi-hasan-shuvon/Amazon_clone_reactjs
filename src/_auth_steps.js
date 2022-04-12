@@ -3,7 +3,8 @@
  * 2.npm install firebase
  * 3.create firebase.init.js and import getAuth and export auth
  * 4. firebase setting >go to Authentication > enable email and password auth
- * 
+ * 5.create login, sign up component,setup route
+ * 6.attach form field handeler and form sublit handeler
  * 
  * 
  */
