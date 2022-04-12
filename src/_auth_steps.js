@@ -9,6 +9,8 @@
  * 8.useCreateUserWithEmailAndPassword(auth) from react-firebase-hooks
  * 9.if user is created redirect to the expected page
  * 10. useSignInWithEmailAndPassword form react-firebase-hooks
+ * 
+ * 11.<RequireAuth> from protecting some page from react router authentication
  */
 
 /**
