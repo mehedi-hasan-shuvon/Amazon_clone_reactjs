@@ -8,7 +8,7 @@ import ReviewItem from '../ReviewItem/ReviewItem';
 import './Orders.css'
 const Orders = () => {
     const [products, setProducts] = useProducts();
-    const [cart, setCart] = useCart(products);
+    const [cart, setCart] = useCart();
     const navigate = useNavigate();
     const handelRemoveProduct = (product) => {
         const rest = cart.filter(item => item._id !== product._id);

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
@@ -8,7 +9,7 @@ import './Shop.css'
 const Shop = () => {
 
 
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useCart();
 
     const [page, setPage] = useState(0);
     const [pageCount, setPageCount] = useState(0);
@@ -40,23 +41,23 @@ const Shop = () => {
 
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const storedCart = getStoredCart();
-        // console.log(storedCart);
-        const savedCart = [];
-        for (const id in storedCart) {
-            const addedProduct = products.find(product => product._id === id);
-            if (addedProduct) {
-                // console.log(addedProduct);
-                const quantity = storedCart[id];
-                addedProduct.quantity = quantity;
-                savedCart.push(addedProduct);
-            }
-        }
+    //     const storedCart = getStoredCart();
+    //     // console.log(storedCart);
+    //     const savedCart = [];
+    //     for (const id in storedCart) {
+    //         const addedProduct = products.find(product => product._id === id);
+    //         if (addedProduct) {
+    //             // console.log(addedProduct);
+    //             const quantity = storedCart[id];
+    //             addedProduct.quantity = quantity;
+    //             savedCart.push(addedProduct);
+    //         }
+    //     }
 
-        setCart(savedCart);
-    }, [products]);
+    //     setCart(savedCart);
+    // }, [products]);
 
 
     const setPageSize = (event) => {
